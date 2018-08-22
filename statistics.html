@@ -17,6 +17,9 @@
 
     <!-- Custom styles for this template -->
     <link href="css/business-casual.min.css" rel="stylesheet">
+
+    <!--d3 JavaScript-->
+    <script src="https://d3js.org/d3.v5.min.js"></script>
 </head>
 <body>
 
@@ -53,7 +56,7 @@
         </div>
     </nav>
 
-    <section class="page-section">
+    <section  class="page-section">
         <div class="container">
             <div class="product-item">
                 <div class="product-item-title d-flex">
@@ -64,7 +67,11 @@
                         </h2>
                     </div>
                 </div>
-                <img class="product-item-img mx-auto d-flex rounded img-fluid mb-3 mb-lg-0" src="img/products-01.jpg" alt="">
+                <img  class="product-item-img mx-auto d-flex rounded img-fluid mb-3 mb-lg-0" src="img/products-01.jpg" alt="">
+
+                <div id="mapSection"></div>
+
+
                 <div class="product-item-description d-flex mr-auto">
                     <div class="bg-faded p-5 rounded">
                         <p class="mb-0">We take pride in our work, and it shows. Every time you order a beverage from us, we guarantee that it will be an experience worth having. Whether it's our world famous Venezuelan Cappuccino, a refreshing iced herbal tea, or something as simple as a cup of speciality sourced black coffee, you will be coming back for more.</p>
@@ -86,6 +93,7 @@
                     </div>
                 </div>
                 <img class="product-item-img mx-auto d-flex rounded img-fluid mb-3 mb-lg-0" src="img/products-02.jpg" alt="">
+
                 <div class="product-item-description d-flex ml-auto">
                     <div class="bg-faded p-5 rounded">
                         <p class="mb-0">Our seasonal menu features delicious snacks, baked goods, and even full meals perfect for breakfast or lunchtime. We source our ingredients from local, oragnic farms whenever possible, alongside premium vendors for specialty goods.</p>
@@ -127,6 +135,9 @@
     <!-- Bootstrap core JavaScript -->
     <script src="jquery/jquery.min.js"></script>
     <script src="js/bootstrap.bundle.js"></script>
+
+
+    <script src="d3/map.js"></script>
 
 </body>
 </html>
