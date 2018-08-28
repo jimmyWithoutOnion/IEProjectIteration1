@@ -61,7 +61,8 @@ var config = {
             backgroundColor: 'rgb(242, 242, 26)',
             borderColor: 'rgb(242, 242, 26)',
             data: DATA.data.tiles,
-        }],
+        }]
+    },
         options: {
             chartArea: {
                 backgroundColor: '#ffffff',
@@ -98,8 +99,7 @@ var config = {
                 }]
             }
         }
-    }
-};
+    };
 
 function getSelectSuburb()
 {
