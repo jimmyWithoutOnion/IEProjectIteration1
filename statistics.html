@@ -20,124 +20,161 @@
 
     <!--d3 JavaScript-->
     <script src="https://d3js.org/d3.v5.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.min.js"></script>
+    <script src="lineChart.js"></script>
+    <style>
+        canvas{
+            -moz-user-select: none;
+            -webkit-user-select: none;
+            -ms-user-select: none;
+        }
+    </style>
 </head>
 <body>
 
-    <h1 class="site-heading text-center text-white d-none d-lg-block">
-        <span class="site-heading-upper text-primary mb-3">Construction and Demolition Waste</span>
-        <span class="site-heading-lower">War on Waste</span>
-    </h1>
+<h1 class="site-heading text-center text-white d-none d-lg-block">
+    <span class="site-heading-upper text-primary mb-3">Construction and Demolition Waste</span>
+    <span class="site-heading-lower">War on Waste</span>
+</h1>
 
-    <!-- Navigation -->
-    <nav class="navbar navbar-expand-lg navbar-dark py-lg-4" id="mainNav">
-        <div class="container">
-            <a class="navbar-brand text-uppercase text-expanded font-weight-bold d-lg-none" href="#">Construction and Demolition Waste</a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarResponsive">
-                <ul class="navbar-nav mx-auto">
-                    <li class="nav-item px-lg-4">
-                        <a class="nav-link text-uppercase text-expanded" href="index.html">Home</a>
-                    </li>
-                    <li class="nav-item active px-lg-4">
-                        <a class="nav-link text-uppercase text-expanded" href="statistics.html">Statistics
-                            <span class="sr-only">(current)</span>
-                        </a>
-                    </li>
-                    <!--<li class="nav-item px-lg-4">-->
-                        <!--<a class="nav-link text-uppercase text-expanded" href="dropSite.html">DropSite</a>-->
-                    <!--</li>-->
-                    <li class="nav-item px-lg-4">
-                        <a class="nav-link text-uppercase text-expanded" href="about.html">About</a>
-                    </li>
-                </ul>
-            </div>
+<!-- Navigation -->
+<nav class="navbar navbar-expand-lg navbar-dark py-lg-4" id="mainNav">
+    <div class="container">
+        <a class="navbar-brand text-uppercase text-expanded font-weight-bold d-lg-none" href="#">Construction and Demolition Waste</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+            <ul class="navbar-nav mx-auto">
+                <li class="nav-item px-lg-4">
+                    <a class="nav-link text-uppercase text-expanded" href="index.html">Home</a>
+                </li>
+                <li class="nav-item active px-lg-4">
+                    <a class="nav-link text-uppercase text-expanded" href="statistics.html">Statistics
+                        <span class="sr-only">(current)</span>
+                    </a>
+                </li>
+                <!--<li class="nav-item px-lg-4">-->
+                <!--<a class="nav-link text-uppercase text-expanded" href="dropSite.html">DropSite</a>-->
+                <!--</li>-->
+                <li class="nav-item px-lg-4">
+                    <a class="nav-link text-uppercase text-expanded" href="about.html">About</a>
+                </li>
+            </ul>
         </div>
-    </nav>
+    </div>
+</nav>
 
-    <section  class="page-section">
-        <div class="container">
-            <div class="product-item">
-                <div class="product-item-title d-flex">
-                    <div class="bg-faded p-5 d-flex ml-auto rounded">
-                        <h2 class="section-heading mb-0">
-                            <span class="section-heading-upper">Blended to Perfection</span>
-                            <span class="section-heading-lower">Coffees &amp; Teas</span>
-                        </h2>
-                    </div>
-                </div>
-                <!--<img  class="product-item-img mx-auto d-flex rounded img-fluid mb-3 mb-lg-0" src="img/products-01.jpg" alt="">-->
-
-                <div id="mapSection" class="product-item-img mx-auto d-flex rounded img-fluid mb-3 mb-lg-0"></div>
-
-
-                <div class="product-item-description d-flex mr-auto">
-                    <div class="bg-faded p-5 rounded">
-                        <p class="mb-0">We take pride in our work, and it shows. Every time you order a beverage from us, we guarantee that it will be an experience worth having. Whether it's our world famous Venezuelan Cappuccino, a refreshing iced herbal tea, or something as simple as a cup of speciality sourced black coffee, you will be coming back for more.</p>
-                    </div>
+<section  class="page-section">
+    <div class="container">
+        <div class="product-item">
+            <div class="product-item-title d-flex">
+                <div class="bg-faded p-5 d-flex ml-auto rounded">
+                    <h2 class="section-heading mb-0">
+                        <span class="section-heading-upper">Blended to Perfection</span>
+                        <span class="section-heading-lower">Coffees &amp; Teas</span>
+                    </h2>
                 </div>
             </div>
-        </div>
-    </section>
+            <!--<img  class="product-item-img mx-auto d-flex rounded img-fluid mb-3 mb-lg-0" src="img/products-01.jpg" alt="">-->
 
-    <section class="page-section">
-        <div class="container">
-            <div class="product-item">
-                <div class="product-item-title d-flex">
-                    <div class="bg-faded p-5 d-flex mr-auto rounded">
-                        <h2 class="section-heading mb-0">
-                            <span class="section-heading-upper">Delicious Treats, Good Eats</span>
-                            <span class="section-heading-lower">Bakery &amp; Kitchen</span>
-                        </h2>
-                    </div>
-                </div>
-                <img class="product-item-img mx-auto d-flex rounded img-fluid mb-3 mb-lg-0" src="img/products-02.jpg" alt="">
+            <div id="mapSection" class="product-item-img mx-auto d-flex rounded img-fluid mb-3 mb-lg-0"></div>
 
-                <div class="product-item-description d-flex ml-auto">
-                    <div class="bg-faded p-5 rounded">
-                        <p class="mb-0">Our seasonal menu features delicious snacks, baked goods, and even full meals perfect for breakfast or lunchtime. We source our ingredients from local, oragnic farms whenever possible, alongside premium vendors for specialty goods.</p>
-                    </div>
+
+            <div class="product-item-description d-flex mr-auto">
+                <div class="bg-faded p-5 rounded">
+                    <p class="mb-0">We take pride in our work, and it shows. Every time you order a beverage from us, we guarantee that it will be an experience worth having. Whether it's our world famous Venezuelan Cappuccino, a refreshing iced herbal tea, or something as simple as a cup of speciality sourced black coffee, you will be coming back for more.</p>
                 </div>
             </div>
         </div>
-    </section>
+    </div>
+</section>
 
-    <section class="page-section">
-        <div class="container">
-            <div class="product-item">
-                <div class="product-item-title d-flex">
-                    <div class="bg-faded p-5 d-flex ml-auto rounded">
-                        <h2 class="section-heading mb-0">
-                            <span class="section-heading-upper">From Around the World</span>
-                            <span class="section-heading-lower">Bulk Speciality Blends</span>
-                        </h2>
-                    </div>
+<section class="page-section">
+    <div class="container">
+        <div class="product-item">
+            <div class="product-item-title d-flex">
+                <div class="bg-faded p-5 d-flex mr-auto rounded">
+                    <h2 class="section-heading mb-0">
+                        <span class="section-heading-upper">Delicious Treats, Good Eats</span>
+                        <span class="section-heading-lower">Bakery &amp; Kitchen</span>
+                    </h2>
                 </div>
-                <img class="product-item-img mx-auto d-flex rounded img-fluid mb-3 mb-lg-0" src="img/products-03.jpg" alt="">
-                <div class="product-item-description d-flex mr-auto">
-                    <div class="bg-faded p-5 rounded">
-                        <p class="mb-0">Travelling the world for the very best quality coffee is something take pride in. When you visit us, you'll always find new blends from around the world, mainly from regions in Central and South America. We sell our blends in smaller to large bulk quantities. Please visit us in person for more details.</p>
-                    </div>
+            </div>
+            <!--<img class="product-item-img mx-auto d-flex rounded img-fluid mb-3 mb-lg-0" src="img/products-02.jpg" alt="">-->
+            <div style="background-color:#e5e3e3" class="product-item-img mx-auto d-flex rounded img-fluid mb-3 mb-lg-0">
+                <canvas id="canvas" ></canvas>
+                <div class="intro-button mx-auto" style="align-self: center">
+                    <button id="addData" class="btn btn-primary btn-xl">See more years</button>
+                    <div><p></p></div>
+                    <button id="removeData" class="btn btn-primary btn-xl">Remove year</button>
+                </div>
+            </div>
+
+
+            <br>
+            <br>
+
+            <!--<script type="text/javascript">-->
+            <!--$.getJSON("data.json", function (data) {-->
+            <!--$.each(data, function (index, value) {-->
+            <!--console.log(value);-->
+            <!--var area = data.area;-->
+            <!--var year = data.year;-->
+            <!--var timber = data.timber;-->
+            <!--var plasterboard = data.plasterboard;-->
+            <!--var concrete = data.concrete;-->
+            <!--var bricks = data.bricks;-->
+            <!--var tiles = data.tiles;-->
+            <!--});-->
+            <!--});-->
+
+            <!--</script>-->
+
+            <div class="product-item-description d-flex ml-auto">
+                <div class="bg-faded p-5 rounded">
+                    <p class="mb-0">Our seasonal menu features delicious snacks, baked goods, and even full meals perfect for breakfast or lunchtime. We source our ingredients from local, oragnic farms whenever possible, alongside premium vendors for specialty goods.</p>
                 </div>
             </div>
         </div>
-    </section>
+    </div>
+</section>
 
-
-    <footer class="footer text-faded text-center py-5">
-        <div class="container">
-            <p class="m-0 small">Copyright &copy; Team Cavaliers 2018</p>
+<section class="page-section">
+    <div class="container">
+        <div class="product-item">
+            <div class="product-item-title d-flex">
+                <div class="bg-faded p-5 d-flex ml-auto rounded">
+                    <h2 class="section-heading mb-0">
+                        <span class="section-heading-upper">From Around the World</span>
+                        <span class="section-heading-lower">Bulk Speciality Blends</span>
+                    </h2>
+                </div>
+            </div>
+            <img class="product-item-img mx-auto d-flex rounded img-fluid mb-3 mb-lg-0" src="img/products-03.jpg" alt="">
+            <div class="product-item-description d-flex mr-auto">
+                <div class="bg-faded p-5 rounded">
+                    <p class="mb-0">Travelling the world for the very best quality coffee is something take pride in. When you visit us, you'll always find new blends from around the world, mainly from regions in Central and South America. We sell our blends in smaller to large bulk quantities. Please visit us in person for more details.</p>
+                </div>
+            </div>
         </div>
-    </footer>
+    </div>
+</section>
 
 
-    <!-- Bootstrap core JavaScript -->
-    <script src="jquery/jquery.min.js"></script>
-    <script src="js/bootstrap.bundle.js"></script>
+<footer class="footer text-faded text-center py-5">
+    <div class="container">
+        <p class="m-0 small">Copyright &copy; Team Cavaliers 2018</p>
+    </div>
+</footer>
 
 
-    <script src="d3/map.js"></script>
+<!-- Bootstrap core JavaScript -->
+<script src="jquery/jquery.min.js"></script>
+<script src="js/bootstrap.bundle.js"></script>
+
+
+<script src="d3/map.js"></script>
 
 </body>
 </html>
