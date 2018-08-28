@@ -137,7 +137,7 @@
         <div class="swiper-button-next"></div>
 
     </div>
-    <div class="container">
+    <div class="container col-md-6">
         <div class="input-group mb-3">
             <input type="text" class="form-control" placeholder="please type in square meters" aria-label="Large">
             <div class="input-group-append">
@@ -155,21 +155,23 @@
             <img class="closebt" src="img/closebt.svg">
         </div>
 
-        <div class="modal-content" class="col-sm-8 col-md-8 col-lg-8 col-lg-offset-2">
+        <div id="modal-container" class="col-sm-8 col-md-8 col-lg-8 col-lg-offset-2">
 
             <!--Your modal content goes here-->
-            <div class="thumb col-lg-4" style="display:none;">
-                <img  src="img/thumbnail.svg">
-            </div>
+            <div class="row">
+                <div class="thumb col-lg-3" style="background-image:url(img/calculator-brick.jpg); height: 480px;">
+                    <!--<div class="zoomImage" style="background-image:url(img/calculator-brick.jpg)"></div>-->
+                    <!--<img src="img/calculator-brick.jpg" height="480" width="640"/>-->
+                </div>
 
-            <div class="thumb col-lg-4" style="display:none;">
-                <img  src="img/thumbnail.svg">
-            </div>
+                <div class="thumb col-lg-3" style="background-image:url(img/calculator-timber.jpg); height: 427px;">
+                    <!--<img src="img/calculator-timber.jpg" height="427" width="640"/>-->
+                </div>
 
-            <div class="thumb col-lg-4" style="display:none;">
-                <img  src="img/thumbnail.svg">
+                <div class="thumb col-lg-3" style="background-image:url(img/calculator-concrete.jpg); height: 438px;" >
+                    <!--<img src="img/calculator-concrete.jpg" height="438" width="640"/>-->
+                </div>
             </div>
-
         </div>
     </div>
 
@@ -214,7 +216,8 @@
             modalTarget:'animatedModal',
             animatedIn: 'bounceInUp',
             animatedOut: 'bounceOutDown',
-
+            color:'#39BEB9',
+            animationDuration:'.5s',
         });
     </script>
 

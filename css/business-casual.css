@@ -264,3 +264,16 @@ p {
   align-items: center;
 }
 
+#modal-container {
+  position:relative;
+  margin-top:100px;
+  overflow:hidden;
+  width: 100%;
+  height: 400px;
+
+}
+
+.thumb {
+  height: 500px;
+
+}
