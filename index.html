@@ -26,7 +26,7 @@
     <link rel="stylesheet" href="dist/css/swiper.min.css">
 
     <!-- Custom styles for this template -->
-    <link href="css/business-casual.min.css" rel="stylesheet">
+    <link href="css/business-casual.css" rel="stylesheet">
 
 </head>
 <body>
@@ -162,32 +162,54 @@
                             <div class="swiper-slide">
 
                                 <img  src="img/calculatorBuilding-house.jpeg" width="300">
-                                <p class="calculatorDescription">House</p>
+                                <p class="calculatorDescription">Residential</p>
+
+
                             </div>
                             <div class="swiper-slide">
 
                                 <img  src="img/calculatorBuilding-school.jpg" width="300">
-                                <p class="calculatorDescription">School</p>
+                                <p class="calculatorDescription">Hotel</p>
+
+
+
                             </div>
                             <div class="swiper-slide">
 
                                 <img  src="img/calculatorBuilding-hospital.jpg" width="300">
-                                <p class="calculatorDescription">Hospital</p>
+                                <p class="calculatorDescription">Student Accommodation</p>
+
+
+
                             </div>
                         </div>
 
 
                         <!-- if need navigation button -->
-                        <div class="swiper-button-prev"></div>
-                        <div class="swiper-button-next"></div>
+                        <div class="swiper-button-prev" onclick="prevCalculator()"></div>
+                        <div class="swiper-button-next" onclick="nextCalculator()"></div>
 
                     </div>
-                    <div class="container col-md-8">
-                        <div class="input-group mb-3">
-                            <input type="text" class="form-control" placeholder="please type in square meters" aria-label="Large">
-                            <div class="input-group-append">
-                                <a id="calculatorModal" class="btn btn-outline-secondary" href="#animatedModal">Calculate</a>
+                    <div class="container col-md-12">
+                        <div id="mainCalculator" class="input-group">
+                            <!--<input type="text" class="form-control" placeholder="please type in square meters" aria-label="Large">-->
+                            <!--<div class="input-group-append">-->
+                                <!--<a id="calculatorModal" class="btn btn-outline-secondary" href="#animatedModal">Calculate</a>-->
+                            <!--</div>-->
+
+                            <input type="text" class="form-control col-lg-3" id="basic-addon1">
+
+                            <input type="text" class="form-control col-lg-3" id="basic-addon2">
+
+                            <input type="text" class="form-control col-lg-3" id="basic-addon3">
+
+
+                            <div class="input-group-append col-lg-3">
+                                <div class="container">
+                                    <a id="calculatorModal" class="btn btn-outline-secondary" href="#animatedModal">Calculate</a>
+                                </div>
                             </div>
+
                         </div>
                     </div>
                 </div>
@@ -199,27 +221,51 @@
     <!--calculatorModal-->
     <div id="animatedModal">
         <!--THIS IS IMPORTANT! to close the modal, the class name has to match the name given on the ID  class="close-animatedModal" -->
-        <div class="close-animatedModal">
-            <img class="closebt" src="img/closebt.svg">
+        <div id="closebt-container" class="close-animatedModal">
+            <img src="https://png.icons8.com/ios/50/000000/cancel.png">
         </div>
 
-        <div id="modal-container" class="col-sm-8 col-md-8 col-lg-8 col-lg-offset-2">
+        <div id="modal-container" class="col-sm-8 col-md-8 col-lg-8">
 
             <!--Your modal content goes here-->
-            <div class="row">
-                <div class="thumb col-lg-3" style="background-image:url(img/calculator-brick.jpg); height: 480px;">
-                    <!--<div class="zoomImage" style="background-image:url(img/calculator-brick.jpg)"></div>-->
-                    <!--<img src="img/calculator-brick.jpg" height="480" width="640"/>-->
-                </div>
+            <div class="container col-md-10">
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="wrap">
+                            <div class="box"><img src="img/calculator-brick.jpg"/></div>
+                        </div>
 
-                <div class="thumb col-lg-3" style="background-image:url(img/calculator-timber.jpg); height: 427px;">
-                    <!--<img src="img/calculator-timber.jpg" height="427" width="640"/>-->
-                </div>
+                        <div class="jumbotron">25 t</div>
 
-                <div class="thumb col-lg-3" style="background-image:url(img/calculator-concrete.jpg); height: 438px;" >
-                    <!--<img src="img/calculator-concrete.jpg" height="438" width="640"/>-->
+                    </div>
+                    <div class="col-md-4">
+                        <div class="wrap">
+                            <div class="box"><img src="img/calculator-timber.jpg"/></div>
+                        </div>
+
+
+                        <div class="jumbotron">25 t</div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="wrap">
+                            <div class="box"><img src="img/calculator-concrete.jpg"/></div>
+
+
+                        </div>
+
+                        <div class="jumbotron">25 t</div>
+
+                    </div>
+
+
                 </div>
             </div>
+
+                    <!--<div class="zoomImage" style="background-image:url(img/calculator-brick.jpg)"></div>-->
+                    <!--<img src="img/calculator-brick.jpg" height="480" width="640"/>-->
+                    <!--<img src="img/calculator-timber.jpg" height="427" width="640"/>-->
+                    <!--<img src="img/calculator-concrete.jpg" height="438" width="640"/>-->
+
         </div>
     </div>
 
@@ -229,6 +275,7 @@
     <footer class="footer text-faded text-center py-5">
         <div class="container">
             <p class="m-0 small">Copyright &copy; Team Cavaliers 2018</p>
+            <a href="https://icons8.com">Icon pack by Icons8</a>
         </div>
     </footer>
 
@@ -256,18 +303,80 @@
                 prevEl: '.swiper-button-prev',
             },
 
-
         })
     </script>
 
     <script>
         $("#calculatorModal").animatedModal({
             modalTarget:'animatedModal',
-            animatedIn: 'bounceInUp',
-            animatedOut: 'bounceOutDown',
-            color:'#39BEB9',
-            animationDuration:'.5s',
+            animatedIn: 'zoomIn',
+            animatedOut: 'bounceOut',
+            color: '#f9f1e6',
+
         });
+
+
+    </script>
+
+    <script>
+
+        var indexOfPicture = 0;
+        showCalculator();
+        console.log(indexOfPicture);
+
+        function prevCalculator() {
+            indexOfPicture -= 1;
+            console.log(indexOfPicture);
+            showCalculator();
+        }
+
+        function nextCalculator() {
+            indexOfPicture += 1;
+            console.log(indexOfPicture);
+            showCalculator();
+        }
+
+        function showCalculator() {
+            if (indexOfPicture < 0) {
+                indexOfPicture = 0;
+            } else if (indexOfPicture > 3) {
+                indexOfPicture = 3;
+            } else {
+
+                switch (indexOfPicture) {
+                    case 0:
+                        document.getElementById("basic-addon1").placeholder = "One Bedroom";
+
+                        document.getElementById("basic-addon2").placeholder = "Two Bedroom";
+
+                        document.getElementById("basic-addon3").placeholder = "Three Bedroom";
+
+                        break;
+
+                    case 1:
+
+                        document.getElementById("basic-addon1").placeholder = "Hotel rooms";
+
+                        document.getElementById("basic-addon2").placeholder = "Serviced apartments";
+
+                        document.getElementById("basic-addon3").placeholder = "Car park area";
+                        break;
+
+                    case 2:
+
+                        document.getElementById("basic-addon1").placeholder = "Student apartments";
+
+                        document.getElementById("basic-addon2").placeholder = "Student beds";
+
+                        document.getElementById("basic-addon3").placeholder = "Car park area";
+                        break;
+                }
+
+            }
+
+        }
+
+
     </script>
 
 </body>
