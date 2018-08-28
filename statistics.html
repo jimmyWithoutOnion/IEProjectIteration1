@@ -96,54 +96,66 @@
             <div class="product-item-title d-flex">
                 <div class="bg-faded p-5 d-flex mr-auto rounded">
                     <h2 class="section-heading mb-0">
-                        <span class="section-heading-upper">Delicious Treats, Good Eats</span>
-                        <span class="section-heading-lower">Bakery &amp; Kitchen</span>
+                        <span class="section-heading-upper">Line chart for C&D waste</span>
+                        <span class="section-heading-lower">Suburb & Year</span>
                     </h2>
                 </div>
+
+                <div class="intro-button mx-auto" style="position: absolute; right: 180px; bottom:5px;">
+                    <select id="SuburbSelect" class="btn btn-primary btn-xl" onchange="getSelectSuburb();">
+                        <option value="Southbank">Southbank</option>
+                        <option value="Parkville">Parkville</option>
+                        <option value="WestMel">West Melbourne (Industrial)</option>
+                        <option value="CBD">Melbourne (CBD)</option>
+                        <option value="EastMel">East Melbourne</option>
+                        <option value="WestMelR">West Melbourne (Residential)</option>
+                        <option value="NorthMel">North Melbourne</option>
+                        <option value="PortMel">Port Melbourne</option>
+                        <option value="Kensington">Kensington</option>
+                        <option value="Carlton">Carlton</option>
+                        <option value="Docklands">Docklands</option>
+                        <option value="Remain">Melbourne (Remainder)</option>
+                    </select>
+                </div>
+
             </div>
-            <!--<img class="product-item-img mx-auto d-flex rounded img-fluid mb-3 mb-lg-0" src="img/products-02.jpg" alt="">-->
-            <div style="background-color:#e5e3e3" class="product-item-img mx-auto d-flex rounded img-fluid mb-3 mb-lg-0">
-                <canvas id="canvas" ></canvas>
-                <!--<div class="intro-button mx-auto" style="align-self: center">-->
-                    <!--<button id="addData" class="btn btn-primary btn-xl">See more years</button>-->
-                    <!--<div><p></p></div>-->
-                    <!--<button id="removeData" class="btn btn-primary btn-xl">Remove year</button>-->
+
+            <div style="background-color:#e5e3e3;top:48px;" class="product-item-img mx-auto d-flex img-fluid rounded mb-3 mb-lg-0">
+                <canvas id="canvas"></canvas>
+            </div>
+
+            <br>
+            <br>
+
+            <div class="product-item-description d-flex ml-auto" style="top:48px;">
+                <div class="bg-faded p-5 rounded">
+                    <p class="mb-0">This line show the tonnes of waste for different types of construction materials in each suburb.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!--<section class="page-section">-->
+    <!--<div class="container">-->
+        <!--<div class="product-item">-->
+            <!--<div class="product-item-title d-flex">-->
+                <!--<div class="bg-faded p-5 d-flex ml-auto rounded">-->
+                    <!--<h2 class="section-heading mb-0">-->
+                        <!--<span class="section-heading-upper">From Around the World</span>-->
+                        <!--<span class="section-heading-lower">Bulk Speciality Blends</span>-->
+                    <!--</h2>-->
                 <!--</div>-->
-            </div>
-
-
-            <br>
-            <br>
-
-            <div class="product-item-description d-flex ml-auto">
-                <div class="bg-faded p-5 rounded">
-                    <p class="mb-0">Our seasonal menu features delicious snacks, baked goods, and even full meals perfect for breakfast or lunchtime. We source our ingredients from local, oragnic farms whenever possible, alongside premium vendors for specialty goods.</p>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<section class="page-section">
-    <div class="container">
-        <div class="product-item">
-            <div class="product-item-title d-flex">
-                <div class="bg-faded p-5 d-flex ml-auto rounded">
-                    <h2 class="section-heading mb-0">
-                        <span class="section-heading-upper">From Around the World</span>
-                        <span class="section-heading-lower">Bulk Speciality Blends</span>
-                    </h2>
-                </div>
-            </div>
-            <img class="product-item-img mx-auto d-flex rounded img-fluid mb-3 mb-lg-0" src="img/products-03.jpg" alt="">
-            <div class="product-item-description d-flex mr-auto">
-                <div class="bg-faded p-5 rounded">
-                    <p class="mb-0">Travelling the world for the very best quality coffee is something take pride in. When you visit us, you'll always find new blends from around the world, mainly from regions in Central and South America. We sell our blends in smaller to large bulk quantities. Please visit us in person for more details.</p>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
+            <!--</div>-->
+            <!--<img class="product-item-img mx-auto d-flex rounded img-fluid mb-3 mb-lg-0" src="img/products-03.jpg" alt="">-->
+            <!--<div class="product-item-description d-flex mr-auto">-->
+                <!--<div class="bg-faded p-5 rounded">-->
+                    <!--<p class="mb-0">Travelling the world for the very best quality coffee is something take pride in. When you visit us, you'll always find new blends from around the world, mainly from regions in Central and South America. We sell our blends in smaller to large bulk quantities. Please visit us in person for more details.</p>-->
+                <!--</div>-->
+            <!--</div>-->
+        <!--</div>-->
+    <!--</div>-->
+<!--</section>-->
 
 
 <footer class="footer text-faded text-center py-5">
