@@ -1,2 +1,2 @@
-var calculator = document.getElementById("calculator");
-calculator.innerHTML += '<div>Calculator</div>';
+// var calculator = document.getElementById("calculator");
+// calculator.innerHTML += '<div>Calculator</div>';
