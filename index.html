@@ -162,32 +162,51 @@
                             <div class="swiper-slide">
 
                                 <img  src="img/calculatorBuilding-house.jpeg" width="300">
-                                <p class="calculatorDescription">House</p>
+                                <p class="calculatorDescription">Residential</p>
+
+
                             </div>
                             <div class="swiper-slide">
 
                                 <img  src="img/calculatorBuilding-school.jpg" width="300">
-                                <p class="calculatorDescription">School</p>
+                                <p class="calculatorDescription">Hotel</p>
+
+
+
                             </div>
                             <div class="swiper-slide">
 
                                 <img  src="img/calculatorBuilding-hospital.jpg" width="300">
-                                <p class="calculatorDescription">Hospital</p>
+                                <p class="calculatorDescription">Student Accommodation</p>
+
+
+
                             </div>
                         </div>
 
 
                         <!-- if need navigation button -->
-                        <div class="swiper-button-prev"></div>
-                        <div class="swiper-button-next"></div>
+                        <div class="swiper-button-prev" onclick="prevCalculator()"></div>
+                        <div class="swiper-button-next" onclick="nextCalculator()"></div>
 
                     </div>
-                    <div class="container col-md-8">
-                        <div class="input-group mb-3">
-                            <input type="text" class="form-control" placeholder="please type in square meters" aria-label="Large">
-                            <div class="input-group-append">
+                    <div class="container col-md-10">
+                        <div id="mainCalculator" class="input-group">
+                            <!--<input type="text" class="form-control" placeholder="please type in square meters" aria-label="Large">-->
+                            <!--<div class="input-group-append">-->
+                                <!--<a id="calculatorModal" class="btn btn-outline-secondary" href="#animatedModal">Calculate</a>-->
+                            <!--</div>-->
+
+                            <input type="text" class="form-control col-lg-3" id="basic-addon1">
+
+                            <input type="text" class="form-control col-lg-3" id="basic-addon2">
+
+                            <input type="text" class="form-control col-lg-3" id="basic-addon3">
+
+                            <div class="input-group-append col-lg-3">
                                 <a id="calculatorModal" class="btn btn-outline-secondary" href="#animatedModal">Calculate</a>
                             </div>
+
                         </div>
                     </div>
                 </div>
@@ -203,23 +222,36 @@
             <img class="closebt" src="img/closebt.svg">
         </div>
 
-        <div id="modal-container" class="col-sm-8 col-md-8 col-lg-8 col-lg-offset-2">
+        <div class="modal-content">
 
             <!--Your modal content goes here-->
-            <div class="row">
-                <div class="thumb col-lg-3" style="background-image:url(img/calculator-brick.jpg); height: 480px;">
-                    <!--<div class="zoomImage" style="background-image:url(img/calculator-brick.jpg)"></div>-->
-                    <!--<img src="img/calculator-brick.jpg" height="480" width="640"/>-->
-                </div>
+            <div class="container col-md-8">
+                <div class="row">
+                    <div class="col-lg-4">
+                        <div class="thumbnail">
+                            <div class="image image1"></div>
+                        </div>
+                    </div>
 
-                <div class="thumb col-lg-3" style="background-image:url(img/calculator-timber.jpg); height: 427px;">
-                    <!--<img src="img/calculator-timber.jpg" height="427" width="640"/>-->
-                </div>
+                    <div class="col-lg-4">
+                        <div class="thumbnail">
+                            <div class="image image2"></div>
+                        </div>
+                    </div>
 
-                <div class="thumb col-lg-3" style="background-image:url(img/calculator-concrete.jpg); height: 438px;" >
-                    <!--<img src="img/calculator-concrete.jpg" height="438" width="640"/>-->
+                    <div class="col-lg-4">
+                        <div class="thumbnail">
+                            <div class="image image3"></div>
+                        </div>
+                    </div>
                 </div>
             </div>
+
+                    <!--<div class="zoomImage" style="background-image:url(img/calculator-brick.jpg)"></div>-->
+                    <!--<img src="img/calculator-brick.jpg" height="480" width="640"/>-->
+                    <!--<img src="img/calculator-timber.jpg" height="427" width="640"/>-->
+                    <!--<img src="img/calculator-concrete.jpg" height="438" width="640"/>-->
+
         </div>
     </div>
 
@@ -256,7 +288,6 @@
                 prevEl: '.swiper-button-prev',
             },
 
-
         })
     </script>
 
@@ -268,6 +299,67 @@
             color:'#39BEB9',
             animationDuration:'.5s',
         });
+
+
+    </script>
+
+    <script>
+
+        var indexOfPicture = 0;
+        showCalculator();
+        console.log(indexOfPicture);
+
+        function prevCalculator() {
+            indexOfPicture -= 1;
+            console.log(indexOfPicture);
+            showCalculator();
+        }
+
+        function nextCalculator() {
+            indexOfPicture += 1;
+            console.log(indexOfPicture);
+            showCalculator();
+        }
+
+        function showCalculator() {
+            if (indexOfPicture < 0) {
+                indexOfPicture = 0;
+            } else if (indexOfPicture > 3) {
+                indexOfPicture = 3;
+            } else {
+
+                switch (indexOfPicture) {
+                    case 0:
+                        document.getElementById("basic-addon1").placeholder = "One Bedroom";
+
+                        document.getElementById("basic-addon2").placeholder = "Two Bedroom";
+
+                        document.getElementById("basic-addon3").placeholder = "Three Bedroom";
+
+                        break;
+                    case 1:
+
+                        document.getElementById("basic-addon1").placeholder = "Number of level";
+
+                        document.getElementById("basic-addon2").placeholder = "Office";
+
+                        document.getElementById("basic-addon3").placeholder = "Car park area";
+                        break;
+                    case 2:
+
+                        document.getElementById("basic-addon1").placeholder = "One Bedroom";
+
+                        document.getElementById("basic-addon2").placeholder = "Two Bedroom";
+
+                        document.getElementById("basic-addon3").placeholder = "Car park area";
+                        break;
+                }
+
+            }
+
+        }
+
+
     </script>
 
 </body>
