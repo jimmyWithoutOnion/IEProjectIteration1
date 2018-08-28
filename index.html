@@ -119,11 +119,11 @@
         </div>
     </section>
 
-    <section class="page-section cta">
-        <div class="container">
-            <div class="row">
-                <div class="col-xl-9 mx-auto">
-                    <div class="cta-inner text-center rounded">
+    <!--<section class="page-section cta">-->
+        <!--<div class="container">-->
+            <!--<div class="row">-->
+                <!--<div class="col-xl-9 mx-auto">-->
+                    <!--<div class="cta-inner text-center rounded">-->
                         <!--<h2 class="section-heading mb-4">-->
                             <!--<span class="section-heading-upper">Our Promise</span>-->
                             <!--<span class="section-heading-lower">To You</span>-->
@@ -133,51 +133,67 @@
                             <!--made with the highest quality ingredients. If you are not satisfied, please let us know and-->
                             <!--we will do whatever we can to make things right!</p>-->
 
-                        <div id="calculator"></div>
+                        <!--<div id="calculator"></div>-->
 
 
+                    <!--</div>-->
+                <!--</div>-->
+            <!--</div>-->
+        <!--</div>-->
+    <!--</section>-->
+
+
+    <section class="page-section cta">
+        <div class="container">
+            <div class="col-xl-10 mx-auto">
+                <div class="cta-inner text-center rounded">
+
+                    <h2 class="section-heading mb-4">
+                        <span class="section-heading-upper">Our</span>
+                        <span class="section-heading-lower">Waste Calculator</span>
+                    </h2>
+
+                    <p class="mb-0"></p>
+
+
+
+                    <div class="swiper-container">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+
+                                <img  src="img/calculatorBuilding-house.jpeg" width="300">
+                                <p class="calculatorDescription">House</p>
+                            </div>
+                            <div class="swiper-slide">
+
+                                <img  src="img/calculatorBuilding-school.jpg" width="300">
+                                <p class="calculatorDescription">School</p>
+                            </div>
+                            <div class="swiper-slide">
+
+                                <img  src="img/calculatorBuilding-hospital.jpg" width="300">
+                                <p class="calculatorDescription">Hospital</p>
+                            </div>
+                        </div>
+
+
+                        <!-- if need navigation button -->
+                        <div class="swiper-button-prev"></div>
+                        <div class="swiper-button-next"></div>
+
+                    </div>
+                    <div class="container col-md-8">
+                        <div class="input-group mb-3">
+                            <input type="text" class="form-control" placeholder="please type in square meters" aria-label="Large">
+                            <div class="input-group-append">
+                                <a id="calculatorModal" class="btn btn-outline-secondary" href="#animatedModal">Calculate</a>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
-
-
-
-    <div class="swiper-container">
-        <div class="swiper-wrapper">
-            <div class="swiper-slide">
-
-                <img  src="img/calculatorBuilding-house.jpeg">
-                <p class="calculatorDescription">House</p>
-            </div>
-            <div class="swiper-slide">
-
-                <img  src="img/calculatorBuilding-school.jpg">
-                <p class="calculatorDescription">School</p>
-            </div>
-            <div class="swiper-slide">
-
-                <img  src="img/calculatorBuilding-hospital.jpg">
-                <p class="calculatorDescription">Hospital</p>
-            </div>
-        </div>
-
-
-        <!-- if need navigation button -->
-        <div class="swiper-button-prev"></div>
-        <div class="swiper-button-next"></div>
-
-    </div>
-    <div class="container col-md-6">
-        <div class="input-group mb-3">
-            <input type="text" class="form-control" placeholder="please type in square meters" aria-label="Large">
-            <div class="input-group-append">
-                <a id="calculatorModal" class="btn btn-outline-secondary" href="#animatedModal">Calculate</a>
-            </div>
-        </div>
-    </div>
-
 
 
     <!--calculatorModal-->
@@ -230,8 +246,9 @@
         var mySwiper = new Swiper ('.swiper-container', {
 
             grabCursor: true,
-            slidesPerView : 3,
-            centeredSlides : true,
+            slidesPerView: 3,
+            centeredSlides: true,
+
 
             // need navigation button
             navigation: {
