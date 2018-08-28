@@ -252,3 +252,15 @@ p {
 .font-weight-light {
   font-weight: 100 !important;
 }
+
+
+.swiper-container {
+  width: 600px;
+  height: 300px;
+}
+
+.calculatorDescription p {
+  color: floralwhite;
+  align-items: center;
+}
+

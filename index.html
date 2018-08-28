@@ -15,15 +15,18 @@
     <link href="https://fonts.googleapis.com/css?family=Lora:400,700|Raleway:400,700" rel="stylesheet">
 
 
-    <!-- Custom styles for this template -->
-    <link href="css/business-casual.min.css" rel="stylesheet">
-
     <!-- Bootstrap core JavaScript -->
     <script src="jquery/jquery.min.js"></script>
     <script src="js/bootstrap.bundle.js"></script>
 
+    <!--animate css modal-->
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/animate.css/3.2.0/animate.min.css">
 
+    <!--Swiper CSS-->
+    <link rel="stylesheet" href="dist/css/swiper.min.css">
 
+    <!-- Custom styles for this template -->
+    <link href="css/business-casual.min.css" rel="stylesheet">
 
 </head>
 <body>
@@ -101,16 +104,77 @@
                         <div id="calculator"></div>
 
 
-
-
-
-
-
                     </div>
                 </div>
             </div>
         </div>
     </section>
+
+
+
+    <div class="swiper-container">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide">
+
+                <img  src="img/calculatorBuilding-house.jpeg">
+                <p class="calculatorDescription">House</p>
+            </div>
+            <div class="swiper-slide">
+
+                <img  src="img/calculatorBuilding-school.jpg">
+                <p class="calculatorDescription">School</p>
+            </div>
+            <div class="swiper-slide">
+
+                <img  src="img/calculatorBuilding-hospital.jpg">
+                <p class="calculatorDescription">Hospital</p>
+            </div>
+        </div>
+
+
+        <!-- if need navigation button -->
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+
+    </div>
+    <div class="container">
+        <div class="input-group mb-3">
+            <input type="text" class="form-control" placeholder="please type in square meters" aria-label="Large">
+            <div class="input-group-append">
+                <a id="calculatorModal" class="btn btn-outline-secondary" href="#animatedModal">Calculate</a>
+            </div>
+        </div>
+    </div>
+
+
+
+    <!--calculatorModal-->
+    <div id="animatedModal">
+        <!--THIS IS IMPORTANT! to close the modal, the class name has to match the name given on the ID  class="close-animatedModal" -->
+        <div class="close-animatedModal">
+            <img class="closebt" src="img/closebt.svg">
+        </div>
+
+        <div class="modal-content" class="col-sm-8 col-md-8 col-lg-8 col-lg-offset-2">
+
+            <!--Your modal content goes here-->
+            <div class="thumb col-lg-4" style="display:none;">
+                <img  src="img/thumbnail.svg">
+            </div>
+
+            <div class="thumb col-lg-4" style="display:none;">
+                <img  src="img/thumbnail.svg">
+            </div>
+
+            <div class="thumb col-lg-4" style="display:none;">
+                <img  src="img/thumbnail.svg">
+            </div>
+
+        </div>
+    </div>
+
+
+
 
     <footer class="footer text-faded text-center py-5">
         <div class="container">
@@ -119,9 +183,40 @@
     </footer>
 
 
+
+
     <!--javascript for calculator-->
     <script src="js/calculator.js"></script>
 
+    <script src="dist/js/swiper.min.js"></script>
+
+    <script src="js/animatedModal.min.js"></script>
+
+    <script>
+        var mySwiper = new Swiper ('.swiper-container', {
+
+            grabCursor: true,
+            slidesPerView : 3,
+            centeredSlides : true,
+
+            // need navigation button
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+
+
+        })
+    </script>
+
+    <script>
+        $("#calculatorModal").animatedModal({
+            modalTarget:'animatedModal',
+            animatedIn: 'bounceInUp',
+            animatedOut: 'bounceOutDown',
+
+        });
+    </script>
 
 </body>
 </html>
