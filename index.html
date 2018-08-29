@@ -14,7 +14,6 @@
     <!-- Custom fonts for this template -->
     <link href="https://fonts.googleapis.com/css?family=Lora:400,700|Raleway:400,700" rel="stylesheet">
 
-
     <!-- Bootstrap core JavaScript -->
     <script src="jquery/jquery.min.js"></script>
     <script src="js/bootstrap.bundle.js"></script>
@@ -30,7 +29,7 @@
 
 </head>
 <body>
-
+    <!-- Title of website -->
     <h1 class="site-heading text-center text-white d-none d-lg-block">
         <span class="site-heading-upper text-primary mb-3">Construction and Demolition Waste</span>
         <span class="site-heading-lower">War on Waste</span>
@@ -39,7 +38,7 @@
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg navbar-dark py-lg-4" id="mainNav">
         <div class="container">
-            <a class="navbar-brand text-uppercase text-expanded font-weight-bold d-lg-none" href="#">Construction and
+            <a class="navbar-brand text-uppercase text-expanded font-weight-bold d-lg-none">Construction and
                 Demolition Waste</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive"
                     aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
@@ -69,7 +68,6 @@
     <section class="page-section clearfix">
         <div class="container">
             <div class="intro">
-
                 <!-- Image Carousel -->
                 <div class="intro-img img-fluid mb-3 mb-lg-0 rounded">
                     <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
@@ -126,6 +124,7 @@
                     </div>
                 </div>
 
+                <!--Description for home page-->
                 <div class="intro-text left-0 text-center bg-faded p-5 rounded">
                     <h2 class="section-heading mb-4">
                         <span class="section-heading-upper">Fresh Coffee</span>
@@ -178,39 +177,26 @@
                         <h5>Our waste calculator is used for calculate
                         the waste generated when </h5>
                     </h2>
-
                     <p class="mb-0"></p>
-
-
-
                     <div class="swiper-container">
+                        <!--add three kinds of building choices-->
                         <div class="swiper-wrapper">
                             <div class="swiper-slide swiper-no-swiping">
 
                                 <img  src="img/calculator-residential.jpeg" width="300">
                                 <p class="calculatorDescription">Residential</p>
-
-
                             </div>
                             <div class="swiper-slide swiper-no-swiping">
 
                                 <img  src="img/calculator-hotel.jpeg" width="300">
                                 <p class="calculatorDescription">Hotel</p>
-
-
-
                             </div>
                             <div class="swiper-slide swiper-no-swiping">
 
                                 <img  src="img/calculator-accommodation.jpeg" width="300">
                                 <p class="calculatorDescription">Student Accommodation</p>
-
-
-
                             </div>
                         </div>
-
-
                         <!-- if need navigation button -->
                         <div class="swiper-button-prev" onclick="prevCalculator()"></div>
                         <div class="swiper-button-next" onclick="nextCalculator()"></div>
@@ -229,20 +215,17 @@
 
                             <input type="text" class="form-control col-lg-3" id="basic-addon3">
 
-
                             <div class="input-group-append col-lg-3">
                                 <div class="container">
                                     <a id="calculatorModal" class="btn btn-outline-secondary" href="#animatedModal">Calculate</a>
                                 </div>
                             </div>
-
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
-
 
     <!--calculatorModal-->
     <div id="animatedModal">
@@ -282,15 +265,11 @@
                     <div class="col-md-4">
                         <div class="wrap">
                             <div class="box"><img src="img/calculator-concrete.jpg"/></div>
-
-
                         </div>
 
                         <h4 id="concreteWaste" class="displayWaste"></h4>
 
                     </div>
-
-
                 </div>
             </div>
 
@@ -302,18 +281,12 @@
         </div>
     </div>
 
-
-
-
     <footer class="footer text-faded text-center py-5">
         <div class="container">
             <p class="m-0 small">Copyright &copy; Team Cavaliers 2018</p>
             <a href="https://icons8.com">Icon pack by Icons8</a>
         </div>
     </footer>
-
-
-
 
     <!--javascript for calculator-->
     <script src="js/calculator.js"></script>
@@ -328,7 +301,6 @@
             slidesPerView: 3,
             centeredSlides: true,
             spaceBetween: 100,
-
 
             // need navigation button
             navigation: {
@@ -471,6 +443,5 @@
         });
 
     </script>
-
 </body>
 </html>
