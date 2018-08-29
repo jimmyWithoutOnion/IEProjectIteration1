@@ -391,6 +391,8 @@
 
             beforeOpen: function () {
 
+
+
             },
 
             afterOpen: function () {
@@ -403,9 +405,9 @@
                 var squareMeter;
 
                 function showNumber(squareMeter) {
-                    $("#brickWaste").text("Brick: " + squareMeter * 0.5 * 0.06 + " T");
-                    $("#timberWaste").text("Timber: " + squareMeter * 0.75 * 0.08 + " T");
-                    $("#concreteWaste").text("Concrete: " + squareMeter * 0.04 + " T");
+                    $("#brickWaste").text("Brick: " + Number(squareMeter * 0.1 * 0.5 * 0.06).toFixed(2) + " T");
+                    $("#timberWaste").text("Timber: " + Number(squareMeter * 0.1 * 0.75 * 0.08).toFixed(2) + " T");
+                    $("#concreteWaste").text("Concrete: " + Number(squareMeter * 0.1 * 0.04).toFixed(2) + " T");
                 }
 
 
