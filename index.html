@@ -14,7 +14,6 @@
     <!-- Custom fonts for this template -->
     <link href="https://fonts.googleapis.com/css?family=Lora:400,700|Raleway:400,700" rel="stylesheet">
 
-
     <!-- Bootstrap core JavaScript -->
     <script src="jquery/jquery.min.js"></script>
     <script src="js/bootstrap.bundle.js"></script>
@@ -30,7 +29,7 @@
 
 </head>
 <body>
-
+    <!-- Title of website -->
     <h1 class="site-heading text-center text-white d-none d-lg-block">
         <span class="site-heading-upper text-primary mb-3">Construction and Demolition Waste</span>
         <span class="site-heading-lower">War on Waste</span>
@@ -39,7 +38,7 @@
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg navbar-dark py-lg-4" id="mainNav">
         <div class="container">
-            <a class="navbar-brand text-uppercase text-expanded font-weight-bold d-lg-none" href="#">Construction and
+            <a class="navbar-brand text-uppercase text-expanded font-weight-bold d-lg-none">Construction and
                 Demolition Waste</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive"
                     aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
@@ -55,9 +54,6 @@
                     <li class="nav-item px-lg-4">
                         <a class="nav-link text-uppercase text-expanded" href="statistics.html">Statistics</a>
                     </li>
-                    <!--<li class="nav-item px-lg-4">-->
-                        <!--<a class="nav-link text-uppercase text-expanded" href="dropSite.html">DropSite</a>-->
-                    <!--</li>-->
                     <li class="nav-item px-lg-4">
                         <a class="nav-link text-uppercase text-expanded" href="about.html">About</a>
                     </li>
@@ -69,7 +65,6 @@
     <section class="page-section clearfix">
         <div class="container">
             <div class="intro">
-
                 <!-- Image Carousel -->
                 <div class="intro-img img-fluid mb-3 mb-lg-0 rounded">
                     <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
@@ -126,6 +121,7 @@
                     </div>
                 </div>
 
+                <!--Description for home page-->
                 <div class="intro-text left-0 text-center bg-faded p-5 rounded">
                     <h2 class="section-heading mb-4">
                         <span class="section-heading-upper">Fresh Coffee</span>
@@ -143,30 +139,7 @@
         </div>
     </section>
 
-    <!--<section class="page-section cta">-->
-        <!--<div class="container">-->
-            <!--<div class="row">-->
-                <!--<div class="col-xl-9 mx-auto">-->
-                    <!--<div class="cta-inner text-center rounded">-->
-                        <!--<h2 class="section-heading mb-4">-->
-                            <!--<span class="section-heading-upper">Our Promise</span>-->
-                            <!--<span class="section-heading-lower">To You</span>-->
-                        <!--</h2>-->
-                        <!--<p class="mb-0">When you walk into our shop to start your day, we are dedicated to providing-->
-                            <!--you with friendly service, a welcoming atmosphere, and above all else, excellent products-->
-                            <!--made with the highest quality ingredients. If you are not satisfied, please let us know and-->
-                            <!--we will do whatever we can to make things right!</p>-->
-
-                        <!--<div id="calculator"></div>-->
-
-
-                    <!--</div>-->
-                <!--</div>-->
-            <!--</div>-->
-        <!--</div>-->
-    <!--</section>-->
-
-
+    <!--Function for calculator-->
     <section class="page-section cta">
         <div class="container">
             <div class="col-xl-10 mx-auto">
@@ -176,39 +149,23 @@
                         <span class="section-heading-upper">Our</span>
                         <span class="section-heading-lower">Waste Calculator</span>
                     </h2>
-
                     <p class="mb-0"></p>
-
-
-
                     <div class="swiper-container">
+                        <!--add three kinds of building choices-->
                         <div class="swiper-wrapper">
                             <div class="swiper-slide">
-
                                 <img  src="img/calculatorBuilding-house.jpeg" width="300">
                                 <p class="calculatorDescription">Residential</p>
-
-
                             </div>
                             <div class="swiper-slide">
-
                                 <img  src="img/calculatorBuilding-school.jpg" width="300">
                                 <p class="calculatorDescription">Hotel</p>
-
-
-
                             </div>
                             <div class="swiper-slide">
-
                                 <img  src="img/calculatorBuilding-hospital.jpg" width="300">
                                 <p class="calculatorDescription">Student Accommodation</p>
-
-
-
                             </div>
                         </div>
-
-
                         <!-- if need navigation button -->
                         <div class="swiper-button-prev" onclick="prevCalculator()"></div>
                         <div class="swiper-button-next" onclick="nextCalculator()"></div>
@@ -227,20 +184,17 @@
 
                             <input type="text" class="form-control col-lg-3" id="basic-addon3">
 
-
                             <div class="input-group-append col-lg-3">
                                 <div class="container">
                                     <a id="calculatorModal" class="btn btn-outline-secondary" href="#animatedModal">Calculate</a>
                                 </div>
                             </div>
-
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
-
 
     <!--calculatorModal-->
     <div id="animatedModal">
@@ -250,7 +204,6 @@
         </div>
 
         <div id="modal-container" class="col-sm-8 col-md-8 col-lg-8">
-
             <!--Your modal content goes here-->
             <div class="container col-md-10">
                 <div class="row">
@@ -258,43 +211,24 @@
                         <div class="wrap">
                             <div class="box"><img src="img/calculator-brick.jpg"/></div>
                         </div>
-
                         <div class="jumbotron">25 t</div>
-
                     </div>
                     <div class="col-md-4">
                         <div class="wrap">
                             <div class="box"><img src="img/calculator-timber.jpg"/></div>
                         </div>
-
-
                         <div class="jumbotron">25 t</div>
                     </div>
                     <div class="col-md-4">
                         <div class="wrap">
                             <div class="box"><img src="img/calculator-concrete.jpg"/></div>
-
-
                         </div>
-
                         <div class="jumbotron">25 t</div>
-
                     </div>
-
-
                 </div>
             </div>
-
-                    <!--<div class="zoomImage" style="background-image:url(img/calculator-brick.jpg)"></div>-->
-                    <!--<img src="img/calculator-brick.jpg" height="480" width="640"/>-->
-                    <!--<img src="img/calculator-timber.jpg" height="427" width="640"/>-->
-                    <!--<img src="img/calculator-concrete.jpg" height="438" width="640"/>-->
-
         </div>
     </div>
-
-
-
 
     <footer class="footer text-faded text-center py-5">
         <div class="container">
@@ -302,9 +236,6 @@
             <a href="https://icons8.com">Icon pack by Icons8</a>
         </div>
     </footer>
-
-
-
 
     <!--javascript for calculator-->
     <script src="js/calculator.js"></script>
@@ -320,13 +251,11 @@
             slidesPerView: 3,
             centeredSlides: true,
 
-
             // need navigation button
             navigation: {
                 nextEl: '.swiper-button-next',
                 prevEl: '.swiper-button-prev',
             },
-
         })
     </script>
 
@@ -336,14 +265,10 @@
             animatedIn: 'zoomIn',
             animatedOut: 'bounceOut',
             color: '#f9f1e6',
-
         });
-
-
     </script>
 
     <script>
-
         var indexOfPicture = 0;
         showCalculator();
         console.log(indexOfPicture);
@@ -395,13 +320,8 @@
                         document.getElementById("basic-addon3").placeholder = "Car park area";
                         break;
                 }
-
             }
-
         }
-
-
     </script>
-
 </body>
 </html>
