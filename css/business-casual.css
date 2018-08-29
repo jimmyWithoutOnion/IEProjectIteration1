@@ -255,22 +255,16 @@ p {
 
 
 .swiper-container {
-  width: 600px;
+  width: 800px;
   height: 300px;
+  margin-top: 40px;
 }
 
-.calculatorDescription p {
-  color: floralwhite;
-  align-items: center;
+.calculatorDescription{
+  text-align: center;
 }
 
-#modal-container {
-  position:relative;
-  margin-top:100px;
-  width: 100%;
 
-
-}
 
 .thumb {
   height: 500px;
@@ -281,7 +275,7 @@ p {
 
 .wrap{
   width: 300px;
-  margin: 0 auto;
+  margin: 10px auto;
 }
 .box{
   width: 200px;
@@ -306,4 +300,14 @@ p {
   width:100%;
   text-align:center;
   margin-top:40px;
+}
+
+.displayWaste {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.br {
+  color: #1b1e21;
+  width: 1.5rem;
 }
